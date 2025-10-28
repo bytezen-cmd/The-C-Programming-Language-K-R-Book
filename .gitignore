@@ -44,7 +44,7 @@
 *.i*86        # Intel x86 executable
 *.x86_64      # AMD64 executable
 *.hex         # Intel HEX format
-a.out         # Default GCC executable name
+*.out         # Default GCC executable name
 
 # Specific executables (add program names without extensions)
 hello
