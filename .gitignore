@@ -1,55 +1,406 @@
-# Prerequisites
-*.d
+# ============================================================================
+# C Programming Exercises - .gitignore
+# ============================================================================
+# This file specifies intentionally untracked files that Git should ignore.
+# Configured for C development on Linux with GCC and Micro editor.
+# ============================================================================
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# ============================================================================
+# Compiled Object Files
+# ============================================================================
+*.o           # Object files
+*.ko          # Kernel object files
+*.obj         # MSVC object files
+*.elf         # Embedded system executables
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
+# ============================================================================
 # Precompiled Headers
-*.gch
-*.pch
+# ============================================================================
+*.gch         # GCC precompiled headers
+*.pch         # MSVC precompiled headers
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# ============================================================================
+# Compiled Static Libraries
+# ============================================================================
+*.lib         # Windows static library
+*.a           # Unix/Linux static library
+*.la          # Libtool library
+*.lo          # Libtool object
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# ============================================================================
+# Compiled Dynamic Libraries / Shared Objects
+# ============================================================================
+*.so          # Linux shared object
+*.so.*        # Linux shared object with version
+*.dylib       # macOS dynamic library
+*.dll         # Windows dynamic library
 
+# ============================================================================
 # Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# ============================================================================
+*.exe         # Windows executable
+*.out         # Default GCC output (a.out)
+*.app         # macOS application bundle
+*.i*86        # Intel x86 executable
+*.x86_64      # AMD64 executable
+*.hex         # Intel HEX format
+a.out         # Default GCC executable name
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# Specific executables (add program names without extensions)
+hello
+temperature
+c-f_table
+temp_reverse
+function_temperature
+word_counter
+b-t-n-counter
+space_corrector
+one_word_per_line
+literal_space
+character_frequency
+vertical_word_length_histogram
+longest-line
+longer_than_80
+remTrail
+reverseS
+fold
+commentRemover
+syntax_checker
+detab
+entab
+getchar_test
+EOF_value
+hello_unknown_escape_sequence
+htoi
+ranges
+setbits
+invert
+rightrot
+bitcount
+lower
+binsearch
+squeeze
+any
+escape
 
+# ============================================================================
+# Linker Output
+# ============================================================================
+*.ilk         # MSVC incremental link file
+*.map         # Linker map file
+*.exp         # MSVC export file
+
+# ============================================================================
+# Debug Files
+# ============================================================================
+*.dSYM/       # macOS debug symbols
+*.su          # Stack usage
+*.idb         # MSVC debug database
+*.pdb         # MSVC program database
+*.dwo         # DWARF object file (split debug info)
+
+# GDB history and settings
+.gdb_history
+.gdbinit
+
+# Core dumps
+core
+core.*
+vgcore.*
+
+# ============================================================================
+# Compiler/Linker Prerequisites
+# ============================================================================
+*.d           # Dependency files
+
+# ============================================================================
 # Kernel Module Compile Results
-*.mod*
-*.cmd
+# ============================================================================
+*.mod*        # Kernel module files
+*.cmd         # Kbuild command files
 .tmp_versions/
 modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
 
-# debug information files
-*.dwo
+# ============================================================================
+# Build Directories
+# ============================================================================
+build/
+bin/
+obj/
+debug/
+release/
+dist/
+out/
+
+# ============================================================================
+# Assembly and Intermediate Files
+# ============================================================================
+*.s           # Assembly source
+*.i           # Preprocessor output
+*.ii          # C++ preprocessor output
+*.bc          # LLVM bitcode
+
+# ============================================================================
+# Editor and IDE Files
+# ============================================================================
+
+# Micro editor (used in this project)
+*~            # Backup files
+*.swp         # Swap files
+*.swo
+.~lock.*
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw?
+Session.vim
+.netrwhist
+tags
+
+# Emacs
+*~
+\#*\#
+.\#*
+*.elc
+auto-save-list
+tramp
+.*.un~
+
+# VS Code
+.vscode/
+*.code-workspace
+.history/
+
+# CLion / IntelliJ
+.idea/
+cmake-build-*/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# Kate
+*.kate-swp
+.kateconfig
+
+# Geany
+*.geany
+
+# Eclipse CDT
+.cproject
+.project
+.settings/
+
+# ============================================================================
+# Testing and Profiling
+# ============================================================================
+
+# Test files and outputs
+test_*.txt
+tests/output/
+*.test
+test_results/
+
+# Profiling data
+gmon.out      # gprof output
+*.gcda        # GCC coverage data
+*.gcno        # GCC coverage notes
+*.gcov        # GCC coverage report
+callgrind.*   # Valgrind callgrind output
+cachegrind.*  # Valgrind cachegrind output
+massif.*      # Valgrind massif output
+
+# ============================================================================
+# Static Analysis
+# ============================================================================
+cppcheck-build/
+*.plist       # Clang static analyzer
+.clang_complete
+compile_commands.json
+
+# ============================================================================
+# Sanitizers
+# ============================================================================
+*.dSYM/       # Debug symbols from sanitizers
+*.asan
+*.tsan
+*.msan
+*.ubsan
+
+# ============================================================================
+# Documentation Build
+# ============================================================================
+html/
+latex/
+doxygen_warnings.txt
+*.log
+
+# ============================================================================
+# Version Control
+# ============================================================================
+.git/
+.gitattributes
+
+# Backup files from merge conflicts
+*.orig
+*.rej
+
+# ============================================================================
+# OS Generated Files
+# ============================================================================
+
+# Linux
+.directory
+.Trash-*/
+.nfs*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.stackdump
+
+# ============================================================================
+# Temporary Files
+# ============================================================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# ============================================================================
+# Package Managers
+# ============================================================================
+# Conan
+conanfile.txt.user
+conanbuildinfo.*
+conan.lock
+
+# vcpkg
+vcpkg_installed/
+
+# ============================================================================
+# CMake
+# ============================================================================
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+_deps/
+
+# ============================================================================
+# Autotools
+# ============================================================================
+Makefile.in
+/ar-lib
+/mdate-sh
+/py-compile
+/test-driver
+/ylwrap
+.deps/
+.dirstamp
+autom4te.cache/
+config.guess
+config.h.in
+config.sub
+configure
+depcomp
+install-sh
+ltmain.sh
+missing
+stamp-h1
+config.log
+config.status
+libtool
+.libs/
+
+# ============================================================================
+# Generated Makefiles (if using make)
+# ============================================================================
+# Makefile      # Uncomment if Makefile is generated, not tracked
+
+# ============================================================================
+# Custom Test Data and Outputs
+# ============================================================================
+# Add project-specific files to ignore
+large_test.txt
+test_input.txt
+test_output.txt
+actual_output.txt
+expected_output.txt
+*.input
+*.output
+
+# ============================================================================
+# Archives and Compressed Files (if used for distribution)
+# ============================================================================
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tbz2
+*.tar.xz
+*.txz
+*.7z
+*.rar
+
+# ============================================================================
+# Logs
+# ============================================================================
+*.log
+log/
+logs/
+
+# ============================================================================
+# Benchmark Results
+# ============================================================================
+benchmark_results/
+*.bench
+perf.data
+perf.data.old
+
+# ============================================================================
+# Personal Notes (keep private)
+# ============================================================================
+notes.txt
+TODO.txt
+NOTES.md
+
+# ============================================================================
+# END OF .gitignore
+# ============================================================================
